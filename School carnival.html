@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Athletics Carnival</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: aliceblue;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 { color: #ff5a43; }
+    button {
+      background: #ff5a43;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    div {
+      border: 1px solid #ff5a43;
+      width: 280px;
+      margin: 6px auto;
+      padding: 8px 12px;
+      text-align: left;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My athletic carniaval</h1>
+  
+
+  <div>JSON Text: <span id="json-text"></span></div>
+  <div>date : <span id="date"></span></div>
+  <div> venue: <span id="venue"></span></div>
+  <div> sports : <span id="sports"></span></div>
+  <div> food stands : <span id="food-stands"></span></div>
+
+  <script>
+
+   
+    let school = {
+      event:  "athletic carniaval",
+      date: "27 June 2026", 
+      venue: "School campus",
+      sports: "Running Race, Soccer, Basketball and Cricket",
+      Food: "Pizza, Burgers and Cool Drinks "
+    };
+  
+      let jsonText    = JSON.stringify(school);
+      let SchoolEvent = JSON.parse(jsonText);
+
+    document.getElementById("json-text").innerHTML = jsonText  
+    document.getElementById("date").innerHTML  = SchoolEvent.date;
+    document.getElementById("venue").innerHTML = SchoolEvent.venue;
+    document.getElementById("sports").innerHTML = SchoolEvent.sports;
+    document.getElementById("food-stands").innerHTML = SchoolEvent.Food;
+ 
+
+ 
+    
+  </script>
+</body>
+</html>
