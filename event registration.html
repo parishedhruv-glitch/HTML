@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Registration Form</title>
+ 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7ff;
+      color: #222222;
+      text-align: center;
+    }
+ 
+    .form-card {
+      width: 520px;
+      background-color: white;
+      border: 3px solid #3b82f6;
+      border-radius: 18px;
+      margin: 40px auto;
+      padding: 25px;
+      box-shadow: 0 0 18px #93c5fd;
+    }
+ 
+    h1 {
+      color: #1d4ed8;
+    }
+ 
+    label {
+      display: block;
+      text-align: left;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+ 
+    input,
+    select {
+      width: 95%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 2px solid #93c5fd;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+ 
+    button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 18px;
+    }
+ 
+    button:hover {
+      background-color: #1e40af;
+    }
+ 
+    #feedback {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 12px;
+      font-weight: bold;
+      line-height: 1.6;
+    }
+ 
+    .success {
+      background-color: #dcfce7;
+      color: #166534;
+      border: 2px solid #22c55e;
+    }
+ 
+    .error {
+      background-color: #fee2e2;
+      color: #991b1b;
+      border: 2px solid #ef4444;
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+    <h1>Event Registration Form</h1>
+ 
+    <p>
+      Fill in the form to register for the school event and generate your event pass.
+    </p>
+
+      <input type="text" id="studentname" required minlength="2" placeholder="Enter your name">
+      <input type="number" id="age" required min="8" max="18" placeholder="Enter your age">
+      <input type="email" id="email" required placeholder="Enter your email">
+      <input type="text" id="eventname" required placeholder="Enter the event you are going to">
+      <button  type="button" onclick="error1()"> Click here</button>
+      <script>
+        function error1() {
+        
+        var name = document.getElementById("studentname").value;
+        var age = document.getElementById("age").value;
+        var email = document.getElementById("email").value;
+        var event1 = document.getElementById("eventname").value;
+        try  {
+
+
+        
+
+        
+          if (name.length < 3) {
+         alert ("name must have atleast 3 characters") 
+            // throw "Name must have at least characters.";
+         }
+
+         if (age < 8 || age > 18) {
+          alert ("Age must be between 8 and 18") 
+          //throw "Age must be between 8 and 18.";
+        }
+
+             if (event1 === "") {
+          alert ("please enter the event you are going to") 
+              //throw "Please select an event.";
+             }
+            }
+          catch (error) {
+        
+ 
+        if (error !== undefined) {
+        studentname.innerHTML = "PLease enter a name with more than 3 charectars: " + error;
+        
+        }
+      }
+        }
+      </script>
+
+
+ </body>
+</html>
+
+
+
+
+
+  
+
+
+
+
